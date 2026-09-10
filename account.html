@@ -1,124 +1,519 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<title>Account &amp; Management — TradeWithDzung</title>
-<meta name="description" content="Professional forex account management. Fill the form and your details go directly to Dzung's WhatsApp.">
-</head>
-<body>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Trade With Dzung — A complete Forex and Gold trading education program from beginner to professional trader.">
+  <title>Trade With Dzung | Forex &amp; Gold Trading Program</title>
 
+  <!-- Connect your uploaded CSS file here. Rename it to styles.css if needed. -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="education-page">
+
+  <!-- ==================== NAVIGATION ==================== -->
   <nav class="nav">
-    <a href="index.html"><img src="logo.png" alt="TradeWithDzung"></a>
+    <a href="index.html" aria-label="Trade With Dzung">
+      <!-- Replace with your own logo/image if needed -->
+      <img src="assets/logo.png" alt="Trade With Dzung">
+    </a>
+
     <div class="links" id="navLinks">
-      <a class="tlink active" href="index.html" style="color:var(--lime)">Home</a>
-      <a class="tlink" href="#about">About</a>
-      <a class="tlink" href="education.html">Education& courses</a>
-      <a class="tlink" href="account.html">Account &amp; Management</a>
-      <a class="tlink" href="eas.html">EA Marketplace</a>
-      <a class="tlink" href="brokers.html">Brokers</a>
-      <a class="tlink" href="#contact">Contact</a>
-      <a class="btn" href="https://t.me/tradewithdzung" target="_blank">Join Telegram</a>
+      <a class="tlink active" href="#program">Program</a>
+      <a class="tlink" href="#beginner">Beginner</a>
+      <a class="tlink" href="#intermediate">Intermediate</a>
+      <a class="tlink" href="#professional">Professional</a>
+      <a class="tlink" href="#pricing">Pricing</a>
+      <a class="btn" href="#registration">Register</a>
     </div>
-    <button class="burger" aria-label="menu"><span></span><span></span><span></span></button>
+
+    <button class="burger" id="burger" aria-label="Fungua menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
-  <header class="page-hero">
-    <div class="tag" style="margin-bottom:20px"><span class="dot"></span> Account &amp; Management</div>
-    <h1>Your capital, <span style="color:var(--lime)">managed with discipline</span></h1>
-    <p>Too busy to trade, or tired of emotional decisions? I manage client accounts on MT4/MT5 with strict risk rules and transparent reporting. Fill in your details below — they go <strong style="color:var(--ink)">straight to my WhatsApp</strong> and I'll reply personally.</p>
-  </header>
+  <main id="top">
 
-  <div class="form-wrap">
-    <div class="steps" style="margin:0 0 40px">
-      <div class="step reveal"><h3>1 · Fill the form</h3><p>Tell me about you, your capital and your goals.</p></div>
-      <div class="step reveal"><h3>2 · Chat on WhatsApp</h3><p>Your details arrive on my phone instantly. We discuss profit split, risk level and timeline.</p></div>
-      <div class="step reveal"><h3>3 · I trade, you track</h3><p>Connect your account and receive regular updates on performance.</p></div>
+    <!-- ==================== HERO ==================== -->
+    <header class="hero">
+      <canvas id="fx"></canvas>
+
+      <div class="inner">
+        <div class="hero-grid">
+
+          <div>
+            <div class="tag">
+              <span class="dot"></span>
+              TRADE WITH DZUNG EDUCATION
+            </div>
+
+            <h1>
+              Learn to Trade
+              <span class="grad">Forex and Gold</span>
+            </h1>
+
+            <p class="lead">
+              From zero to a confident trader with discipline, market
+              understanding, and proper risk management.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn" href="#pricing">View Packages</a>
+              <a class="btn ghost" href="#program">View Curriculum</a>
+            </div>
+          </div>
+
+          <div class="hero-photo">
+            <img src="assets/dzung-trader.jpg" alt="Dzung — XAUUSD and Forex trader">
+            <div class="float-badge">
+              <b>Dzung</b> · Forex &amp; XAUUSD Trader
+            </div>
+          </div>
+
+        </div>
+
+        <div class="ticker" aria-label="Trading instruments">
+          <div class="chip">
+            <div class="sym">XAUUSD</div>
+            <div class="prc">GOLD</div>
+            <div class="dir up">MARKET ANALYSIS</div>
+          </div>
+          <div class="chip">
+            <div class="sym">FOREX</div>
+            <div class="prc">CURRENCY PAIRS</div>
+            <div class="dir up">TECHNICAL ANALYSIS</div>
+          </div>
+          <div class="chip">
+            <div class="sym">SMC</div>
+            <div class="prc">SMART MONEY</div>
+            <div class="dir up">PRICE ACTION</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==================== PROGRAM OVERVIEW ==================== -->
+    <div class="stats" id="program">
+      <div class="cell">
+        <div class="num">3</div>
+        <div class="lbl">Levels</div>
+      </div>
+      <div class="cell">
+        <div class="num">8</div>
+        <div class="lbl">Weeks</div>
+      </div>
+      <div class="cell">
+        <div class="num">5</div>
+        <div class="lbl">Packages</div>
+      </div>
+      <div class="cell">
+        <div class="num">1:1</div>
+        <div class="lbl">Mentorship</div>
+      </div>
     </div>
 
-    <form class="form-card reveal" id="acctForm">
-      <h3>Client Information Form</h3>
-      <p class="fnote">Fields marked * are required. Submitting opens WhatsApp with your details pre-filled.</p>
+    <!-- ==================== INTRO ==================== -->
+    <section>
+      <div class="kick">Trade With Dzung</div>
+      <h2 class="title">Learn Trading With A Complete System</h2>
+      <p class="sub">
+        Taught by Dzung, an XAUUSD and Forex trader and MQL5 EA developer.
+        Every lesson is based on real trading experience, not theory alone.
+        By the end of this program, you will be able to analyze the market,
+        enter trades with discipline, and build a sustainable trading process.
+      </p>
+    </section>
 
-      <div class="frow">
-        <div class="field"><label>Full name *</label><input name="Full name" required placeholder="e.g. John Mushi"></div>
-        <div class="field"><label>Phone / WhatsApp *</label><input name="Phone" required placeholder="+255 ..."></div>
+    <!-- ==================== BEGINNER ==================== -->
+    <section id="beginner">
+      <div class="kick">Level 01</div>
+      <h2 class="title">BEGINNER LEVEL</h2>
+      <p class="sub">
+        <strong>Goal:</strong> Understand how the market works and avoid
+        losing money through preventable mistakes.
+      </p>
+
+      <div class="cards">
+
+        <article class="card">
+          <div class="ic">01</div>
+          <h3>Week 1 — Market Fundamentals</h3>
+          <p>Build a foundation in Forex, Gold, charts, and MetaTrader 5.</p>
+          <ul>
+            <li>What is Forex? How do financial markets work?</li>
+            <li>Currency pairs explained, and why trade Gold (XAUUSD)?</li>
+            <li>How to open a demo account with PU Prime or IC Markets</li>
+            <li>MetaTrader 5 — reading charts and placing orders</li>
+            <li>Candlesticks — types and what they mean</li>
+            <li>Timeframes from M1 to MN — meaning and when to use them</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="ic">02</div>
+          <h3>Week 2 — Risk Management First</h3>
+          <p>Risk management protects your account and builds consistency.</p>
+          <ul>
+            <li>Risk management — why it matters</li>
+            <li>Lot size explained with real numerical examples</li>
+            <li>The 0.5% risk rule for every trade</li>
+            <li>Stop Loss and Take Profit — always use both</li>
+            <li>The maximum 2% daily loss rule</li>
+            <li>Beginner psychology — FOMO, revenge trading, and overtrading</li>
+          </ul>
+        </article>
+
       </div>
-      <div class="frow">
-        <div class="field"><label>Email</label><input type="email" name="Email" placeholder="you@example.com"></div>
-        <div class="field"><label>Country *</label><input name="Country" required placeholder="e.g. Tanzania"></div>
+
+      <div class="signal">
+        <div class="s-top">
+          <div class="pair">WEEK 2 ASSIGNMENT</div>
+          <div class="live">Demo Practice</div>
+        </div>
+        <div class="row">
+          <small>Task</small>
+          <b>Trade on a demo account for two weeks</b>
+        </div>
+        <div class="row">
+          <small>Requirement</small>
+          <b>Complete 10 trade reports</b>
+        </div>
+        <div class="row">
+          <small>Include</small>
+          <b>Entry · SL · TP · Results</b>
+        </div>
       </div>
-      <div class="frow">
-        <div class="field"><label>Broker name *</label><input name="Broker" required placeholder="e.g. Exness, XM, Deriv"></div>
-        <div class="field"><label>Account type</label>
-          <select name="Account type">
-            <option>MT4</option><option>MT5</option><option>cTrader</option><option>Other</option>
+    </section>
+
+    <!-- ==================== INTERMEDIATE ==================== -->
+    <section id="intermediate">
+      <div class="kick">Level 02</div>
+      <h2 class="title">INTERMEDIATE LEVEL</h2>
+      <p class="sub">
+        <strong>Goal:</strong> Read charts confidently and identify setups independently.
+      </p>
+
+      <div class="cards">
+
+        <article class="card">
+          <div class="ic">03</div>
+          <h3>Week 3 — Technical Analysis</h3>
+          <ul>
+            <li>Support and Resistance — identifying real and false levels</li>
+            <li>Trend identification — higher highs and lower lows</li>
+            <li>Market structure — uptrend, downtrend, and range</li>
+            <li>EMA (20, 50, 200) — using them for confirmation</li>
+            <li>ATR — measuring volatility and setting accurate SL levels</li>
+            <li>Sessions — London, New York, and Asia — how XAUUSD behaves in each</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="ic">04</div>
+          <h3>Week 4 — SMC Fundamentals</h3>
+          <ul>
+            <li>Who is Smart Money and what do they do?</li>
+            <li>Liquidity — stop hunts and taking highs and lows</li>
+            <li>Order Blocks — how to identify them on a chart</li>
+            <li>Break of Structure (BOS) versus Change of Character (CHoCH)</li>
+            <li>Fair Value Gaps (FVG) — what they are and how to trade them</li>
+            <li>Confluence — combining two or three factors before entering</li>
+          </ul>
+        </article>
+
+      </div>
+
+      <div class="signal">
+        <div class="s-top">
+          <div class="pair">WEEK 4 ASSIGNMENT</div>
+          <div class="live">Backtesting</div>
+        </div>
+        <div class="row">
+          <small>Task</small>
+          <b>Mark up the charts from the previous week</b>
+        </div>
+        <div class="row">
+          <small>Target</small>
+          <b>Identify at least five valid setups</b>
+        </div>
+        <div class="row">
+          <small>Setup</small>
+          <b>BOS / CHoCH with Order Block confluence</b>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROFESSIONAL ==================== -->
+    <section id="professional">
+      <div class="kick">Level 03</div>
+      <h2 class="title">PROFESSIONAL LEVEL</h2>
+      <p class="sub">
+        <strong>Goal:</strong> Trade a live account consistently and confidently
+        without relying on someone else.
+      </p>
+
+      <div class="cards">
+
+        <article class="card">
+          <div class="ic">05</div>
+          <h3>Weeks 5–6 — Advanced SMC and Precise Execution</h3>
+          <ul>
+            <li>Multi-timeframe analysis — HTF for direction, LTF for entries</li>
+            <li>H4/H1 for market direction, M15/M5 for precise entries</li>
+            <li>Premium and Discount zones explained</li>
+            <li>Traps and false moves — how Smart Money misleads retail traders</li>
+            <li>News trading — how to use it or avoid it</li>
+            <li>Prop firm challenges — rules, strategy, and how to pass</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="ic">06</div>
+          <h3>Week 7 — Trading as a Business</h3>
+          <ul>
+            <li>Your trading journal — why it cannot be skipped</li>
+            <li>Weekly performance review — understanding your statistics</li>
+            <li>EA fundamentals — how robots work (introduction to DzungPro EA)</li>
+            <li>Growing your account — from $200 to $1,000+ with patience</li>
+            <li>Account management — handling client capital responsibly</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="ic">07</div>
+          <h3>Week 8 — Live Session and Graduation</h3>
+          <ul>
+            <li>Live trading session with Dzung — watch real-time analysis and execution</li>
+            <li>Deep Q&amp;A — get answers to all your remaining questions</li>
+            <li>Trade With Dzung Certificate of Completion</li>
+            <li>BONUS: One month of FREE access to Trade With Dzung Premium Signals</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ==================== PRICING ==================== -->
+    <section id="pricing">
+      <div class="kick">Investment</div>
+      <h2 class="title">PRICING PLANS</h2>
+      <p class="sub">
+        Choose the package that matches your learning level and support needs.
+      </p>
+
+      <div class="ea-grid">
+
+        <article class="ea">
+          <div class="art">01</div>
+          <div class="body">
+            <h3>Beginner</h3>
+            <div class="pairline">Weeks 2–3</div>
+            <p>Fundamentals + Risk Management</p>
+            <ul>
+              <li>Group chat</li>
+              <li>Forex and Gold foundation</li>
+              <li>Risk Management</li>
+            </ul>
+            <div class="price-tag">80,000 TZS</div>
+            <a class="btn" href="#registration" data-education-package="Beginner — 80,000 TZS">Choose</a>
+          </div>
+        </article>
+
+        <article class="ea">
+          <div class="art">02</div>
+          <div class="body">
+            <h3>Intermediate</h3>
+            <div class="pairline">Weeks 3–4</div>
+            <p>Technical Analysis + SMC Fundamentals</p>
+            <ul>
+              <li>Group chat</li>
+              <li>Technical Analysis</li>
+              <li>SMC fundamentals</li>
+            </ul>
+            <div class="price-tag">150,000 TZS</div>
+            <a class="btn" href="#registration" data-education-package="Intermediate — 150,000 TZS">Choose</a>
+          </div>
+        </article>
+
+        <article class="ea">
+          <div class="art">03</div>
+          <div class="body">
+            <h3>Professional</h3>
+            <div class="pairline">Weeks 4–5</div>
+            <p>Advanced SMC + Live Session</p>
+            <ul>
+              <li>Group chat + 1-on-1</li>
+              <li>Advanced SMC</li>
+              <li>Live session</li>
+            </ul>
+            <div class="price-tag">250,000 TZS</div>
+            <a class="btn" href="#registration" data-education-package="Professional — 250,000 TZS">Choose</a>
+          </div>
+        </article>
+
+        <article class="ea">
+          <div class="art">04</div>
+          <div class="body">
+            <h3>Complete</h3>
+            <div class="pairline">Week 8</div>
+            <p>All three levels</p>
+            <ul>
+              <li>Group chat + 1-on-1</li>
+              <li>Full curriculum</li>
+              <li>Live + Q&amp;A</li>
+            </ul>
+            <div class="price-tag">380,000 TZS</div>
+            <a class="btn" href="#registration" data-education-package="Complete — 380,000 TZS">Choose</a>
+          </div>
+        </article>
+
+        <article class="ea">
+          <div class="art">05</div>
+          <div class="body">
+            <h3>VIP</h3>
+            <div class="pairline">Week 8 + 3 months</div>
+            <p>Everything + Premium Signals</p>
+            <ul>
+              <li>First 1-on-1 session</li>
+              <li>Full program</li>
+              <li>Premium Signals</li>
+            </ul>
+            <div class="price-tag">500,000 TZS</div>
+            <a class="btn" href="#registration" data-education-package="VIP — 500,000 TZS">Choose</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ==================== REGISTRATION ==================== -->
+    <section id="registration">
+      <div class="kick">Get Started</div>
+      <h2 class="title">PAYMENT AND REGISTRATION</h2>
+      <p class="sub">
+        Follow these steps to begin your Trade With Dzung program.
+      </p>
+
+      <div class="steps">
+        <article class="step">
+          <h3>Choose a package</h3>
+          <p>Choose the package that suits you from the pricing plans above.</p>
+        </article>
+
+        <article class="step">
+          <h3>Make payment</h3>
+          <p>Send payment through M-Pesa, Tigo Pesa, Airtel Money, or PayPal.</p>
+        </article>
+
+        <article class="step">
+          <h3>Keep your receipt</h3>
+          <p>Take a photo of your payment receipt.</p>
+        </article>
+
+        <article class="step">
+          <h3>Send it to Dzung</h3>
+          <p>Send the receipt photo through WhatsApp or Telegram.</p>
+        </article>
+
+        <article class="step">
+          <h3>Get access</h3>
+          <p>You will receive a welcome message and access within 24 hours.</p>
+        </article>
+      </div>
+
+      <form class="form-card education-form reveal" id="educationForm">
+        <h3>Registration Inquiry</h3>
+        <p class="fnote">Submit your details and your selected package will be sent directly to WhatsApp.</p>
+
+        <div class="field">
+          <label for="educationPackage">Selected package *</label>
+          <select id="educationPackage" name="Package" required>
+            <option value="">Choose a package</option>
+            <option>Beginner — 80,000 TZS</option>
+            <option>Intermediate — 150,000 TZS</option>
+            <option>Professional — 250,000 TZS</option>
+            <option>Complete — 380,000 TZS</option>
+            <option>VIP — 500,000 TZS</option>
           </select>
         </div>
-      </div>
-      <div class="frow">
-        <div class="field"><label>Account balance (USD) *</label><input name="Balance (USD)" required placeholder="e.g. 500"></div>
-        <div class="field"><label>Trading experience</label>
-          <select name="Experience">
-            <option>Beginner (0–1 yr)</option><option>Intermediate (1–3 yrs)</option><option>Advanced (3+ yrs)</option>
-          </select>
+
+        <div class="frow">
+          <div class="field"><label>Full name *</label><input name="Full name" required placeholder="Your name"></div>
+          <div class="field"><label>Phone / WhatsApp *</label><input name="Phone" required placeholder="+255 ..."></div>
         </div>
-      </div>
-
-      <div class="field"><label>Service(s) you want *</label>
-        <div style="display:flex;gap:18px;flex-wrap:wrap;color:var(--mut);font-size:.92rem;padding:4px 0">
-          <label><input type="checkbox" name="services" value="Account Management"> Account Management</label>
-          <label><input type="checkbox" name="services" value="Profit-share Trading"> Profit-share Trading</label>
-          <label><input type="checkbox" name="services" value="1-on-1 Mentorship"> 1-on-1 Mentorship</label>
-          <label><input type="checkbox" name="services" value="Broker Verification"> Broker Verification</label>
+        <div class="frow">
+          <div class="field"><label>Email</label><input type="email" name="Email" placeholder="you@example.com"></div>
+          <div class="field"><label>Country</label><input name="Country" placeholder="e.g. Tanzania"></div>
         </div>
-      </div>
-
-      <div class="frow">
-        <div class="field"><label>Risk level you're comfortable with</label>
-          <select name="Risk level">
-            <option>Low (steady growth)</option><option>Medium (balanced)</option><option>High (aggressive)</option>
-          </select>
+        <div class="frow">
+          <div class="field"><label>Preferred payment method</label>
+            <select name="Payment method"><option>M-Pesa</option><option>Tigo Pesa</option><option>Airtel Money</option><option>PayPal</option><option>Not sure yet</option></select>
+          </div>
+          <div class="field"><label>Trading experience</label>
+            <select name="Experience"><option>Complete beginner</option><option>Some experience</option><option>Experienced trader</option></select>
+          </div>
         </div>
-        <div class="field"><label>Preferred contact time</label><input name="Best time to contact" placeholder="e.g. Evenings, EAT"></div>
+        <div class="field"><label>Questions / notes</label>
+          <textarea name="Notes" placeholder="Tell me about your goals or ask any questions..."></textarea>
+        </div>
+
+        <button type="submit" class="btn wa-send">Send registration to WhatsApp</button>
+        <div class="form-ok" id="educationOk">WhatsApp opened with your registration details.</div>
+      </form>
+    </section>
+
+    <!-- ==================== SUCCESS TIPS ==================== -->
+    <section>
+      <div class="grid2">
+
+        <div>
+          <div class="kick">Trader Mindset</div>
+          <h2 class="title">SUCCESS TIPS</h2>
+          <p class="sub">
+            Trading requires process, discipline, and consistency.
+          </p>
+        </div>
+
+        <div class="about-txt">
+          <p>✓ Each session lasts 60–90 minutes — stay focused.</p>
+          <p>✓ Complete every assignment before the next lesson.</p>
+          <p>✓ Trade on demo before going live — no exceptions.</p>
+          <p>✓ Ask questions without fear — no question is foolish.</p>
+          <p>✓ Trust the process — consistency beats luck every time.</p>
+        </div>
+
       </div>
+    </section>
 
-      <div class="field"><label>Your goals / extra notes</label>
-        <textarea name="Notes" placeholder="Tell me your target, timeline, or anything else I should know..."></textarea>
-      </div>
+    <!-- ==================== CONTACT ==================== -->
+    <div class="socials">
+      <a class="soc" href="#" aria-label="Instagram">Instagram</a>
+      <a class="soc" href="#" aria-label="Telegram">Telegram</a>
+      <a class="soc" href="#" aria-label="WhatsApp">WhatsApp</a>
+    </div>
 
-      <button type="submit" class="btn wa-send"><svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.29.18-1.42-.08-.12-.28-.2-.57-.34zm-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 1 1 8.38 4.63zm8.42-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.47-8.41z"/></svg> Send to WhatsApp</button>
-      <div class="form-ok" id="acctOk">✔ WhatsApp opened with your details. If it didn't, message me directly at +255 745 199 576.</div>
-    </form>
-  </div>
+    <div class="socials socials-secondary">
+      <a class="soc direct-contact" href="#registration">Contact Dzung</a>
+    </div>
 
-  <div class="socials">
-    <a class="soc" href="https://t.me/tradewithdzung" target="_blank"><svg viewBox="0 0 24 24"><path d="M9.04 15.7l-.38 5.36c.55 0 .79-.24 1.08-.52l2.6-2.48 5.38 3.94c.99.55 1.69.26 1.96-.9L22.9 4.6c.32-1.45-.52-2.02-1.48-1.66L2.2 10.9c-1.42.55-1.4 1.34-.24 1.7l4.93 1.53L18.26 6.8c.6-.4 1.14-.18.7.22z"/></svg> Telegram</a>
-    <a class="soc" href="https://www.instagram.com/tradewithdzung?stkn=azIyY24zc2JjOWRv" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.78 2.7 21.36.27 17 .07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.15A4 4 0 1 1 16 12a4 4 0 0 1-4 3.99zm6.4-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg> Instagram</a>
-    <a class="soc" href="https://www.tiktok.com/@tradewithdzung?_r=1&_t=ZS-99aoD9HJnmC" target="_blank"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.9 2.9 0 1 1-2.01-2.77V9.39a6.34 6.34 0 1 0 5.46 6.28V8.69a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.12z"/></svg> TikTok</a>
-    <a class="soc" href="https://youtube.com/@tradewithdzung?si=ZJ-uL6FaXeh6e82T" target="_blank"><svg viewBox="0 0 24 24"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12z"/></svg> YouTube</a>
-    <a class="soc" href="https://whatsapp.com/channel/0029Vb87YiJAzNc2whz7le1A" target="_blank"><svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.29.18-1.42-.08-.12-.28-.2-.57-.34zm-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 1 1 8.38 4.63zm8.42-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.47-8.41z"/></svg> WhatsApp Channel</a>
-  </div>
+  </main>
 
+  <!-- ==================== FOOTER ==================== -->
   <footer>
-    <img class="flogo" src="logo.png" alt="TradeWithDzung">
+    <img class="flogo" src="assets/logo-white.png" alt="Trade With Dzung">
+    <p>Trade With Dzung · Dar es Salaam, Tanzania</p>
     <p>
-      <a href="https://t.me/tradewithdzung" target="_blank">Telegram</a> ·
-      <a href="https://www.instagram.com/tradewithdzung?stkn=azIyY24zc2JjOWRv" target="_blank">Instagram</a> ·
-      <a href="https://www.tiktok.com/@tradewithdzung?_r=1&_t=ZS-99aoD9HJnmC" target="_blank">TikTok</a> ·
-      <a href="https://youtube.com/@tradewithdzung?si=ZJ-uL6FaXeh6e82T" target="_blank">YouTube</a> ·
-      <a href="https://whatsapp.com/channel/0029Vb87YiJAzNc2whz7le1A" target="_blank">WhatsApp Channel</a> ·
-      <a href="mailto:derickmushi80@gmail.com">Email</a>
+      © 2026 Trade With Dzung — All rights reserved.
     </p>
-    <p style="margin-top:10px">Personal WhatsApp: <a href="https://wa.me/255745199576" target="_blank">+255 745 199 576</a></p>
-    <p class="risk">Trading forex, gold, indices and crypto carries substantial risk of loss and is not suitable for every investor. Past performance is not indicative of future results. TradeWithDzung provides education, tools and account services — always do your own due diligence.</p>
-    <p style="margin-top:18px">© 2026 TradeWithDzung. All rights reserved.</p>
+    <p class="risk">
+      Disclaimer: Forex and Gold trading carry a substantial risk of loss and are not suitable for every investor.
+      Past performance is not indicative of future results. This program provides education only and does not constitute financial advice.
+      Always manage your risk and do your own due diligence.
+    </p>
   </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
+
 </body>
 </html>
