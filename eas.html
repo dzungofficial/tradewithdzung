@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<title>EA Marketplace — TradeWithDzung</title>
+<meta name="description" content="Expert Advisors by TradeWithDzung. Backtested MT4/MT5 trading robots. Enquire and get details straight on WhatsApp.">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html"><img src="assets/logo.png" alt="TradeWithDzung"></a>
+    <div class="links" id="navLinks">
+      <a class="tlink" href="index.html">Home</a>
+      <a class="tlink" href="index.html#about">About</a>
+      <a class="tlink" href="education.html">Education &amp; Courses</a>
+      <a class="tlink" href="account.html">Account &amp; Management</a>
+      <a class="tlink active" href="eas.html" style="color:var(--lime)">EA Marketplace</a>
+      <a class="tlink" href="brokers.html">Brokers</a>
+      <a class="tlink" href="index.html#contact">Contact</a>
+      <a class="btn" href="https://t.me/tradewithdzung" target="_blank">Join Telegram</a>
+    </div>
+    <button class="burger" aria-label="menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="page-hero" aria-labelledby="ea-hero-title">
+    <canvas id="fx" aria-hidden="true"></canvas>
+    <div class="tag" style="margin-bottom:20px"><span class="dot"></span> EA Marketplace</div>
+    <h1 id="ea-hero-title">Trading robots built <span style="color:var(--lime)">by me, tested in live markets</span></h1>
+    <p>Every Expert Advisor here is coded, backtested and optimized by TradeWithDzung for a specific market, session and risk profile. Pick one, hit enquire, and the details land directly on my WhatsApp.</p>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="ea-grid">
+
+      <div class="ea reveal">
+        <div class="art"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></div>
+        <div class="body">
+          <h3>Dzung Gold Scalper</h3>
+          <div class="pairline">XAUUSD · M5 · London &amp; NY session</div>
+          <p>A precision scalper built exclusively for gold. Uses volatility breakouts and session filters to catch clean intraday moves while avoiding news spikes.</p>
+          <ul>
+            <li>Built-in news filter &amp; spread guard</li>
+            <li>Auto lot sizing by balance</li>
+            <li>Works on any MT4/MT5 broker</li>
+          </ul>
+          <div class="price-tag">$149 <small>/ lifetime license</small></div>
+          <button class="btn" data-ea-pick="Dzung Gold Scalper">Enquire on WhatsApp</button>
+        </div>
+      </div>
+
+      <div class="ea reveal">
+        <div class="art"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></div>
+        <div class="body">
+          <h3>Dzung Trend Rider</h3>
+          <div class="pairline">EURUSD · GBPUSD · H1</div>
+          <p>A swing-style trend follower that rides major moves for days. Perfect if you hate staring at charts — set it, VPS it, forget it.</p>
+          <ul>
+            <li>Multi-pair trend detection</li>
+            <li>Trailing stop &amp; breakeven logic</li>
+            <li>Low drawdown profile</li>
+          </ul>
+          <div class="price-tag">$199 <small>/ lifetime license</small></div>
+          <button class="btn" data-ea-pick="Dzung Trend Rider">Enquire on WhatsApp</button>
+        </div>
+      </div>
+
+      <div class="ea reveal">
+        <div class="art"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 15l4-6 3 3 5-8"/></svg></div>
+        <div class="body">
+          <h3>Nas100 Beast</h3>
+          <div class="pairline">NAS100 · US30 · M15</div>
+          <p>Made for index traders. Exploits the NY open momentum on Nasdaq and Dow with strict session timing and equity protection.</p>
+          <ul>
+            <li>NY session momentum entries</li>
+            <li>Equity stop &amp; daily loss limit</li>
+            <li>Prop-firm rule friendly</li>
+          </ul>
+          <div class="price-tag">$249 <small>/ lifetime license</small></div>
+          <button class="btn" data-ea-pick="Nas100 Beast">Enquire on WhatsApp</button>
+        </div>
+      </div>
+
+      <div class="ea reveal">
+        <div class="art"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div class="body">
+          <h3>Crypto Guardian</h3>
+          <div class="pairline">BTCUSD · ETHUSD · H4</div>
+          <p>A conservative crypto swing EA with portfolio-level risk control. Built for traders who want crypto exposure without the sleepless nights.</p>
+          <ul>
+            <li>Drawdown circuit breaker</li>
+            <li>Multi-timeframe confirmation</li>
+            <li>24/7 ready for VPS</li>
+          </ul>
+          <div class="price-tag">$299 <small>/ lifetime license</small></div>
+          <button class="btn" data-ea-pick="Crypto Guardian">Enquire on WhatsApp</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- EA inquiry form -->
+    <div class="form-wrap" style="padding-top:80px;padding-bottom:0">
+      <form class="form-card reveal" id="eaForm">
+        <h3>EA Inquiry Form</h3>
+        <p class="fnote">Interested in an EA? Fill this in — it opens WhatsApp with everything pre-typed. I'll send you backtests, setup guide and payment details.</p>
+
+        <div class="field"><label>Which EA(s) are you interested in? *</label>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;color:var(--mut);font-size:.92rem;padding:4px 0">
+            <label><input type="checkbox" name="ea" value="Dzung Gold Scalper"> Dzung Gold Scalper</label>
+            <label><input type="checkbox" name="ea" value="Dzung Trend Rider"> Dzung Trend Rider</label>
+            <label><input type="checkbox" name="ea" value="Nas100 Beast"> Nas100 Beast</label>
+            <label><input type="checkbox" name="ea" value="Crypto Guardian"> Crypto Guardian</label>
+            <label><input type="checkbox" name="ea" value="Custom EA request"> Custom EA (built for me)</label>
+            <label><input type="checkbox" name="ea" value="Not sure — advise me"> Not sure — advise me</label>
+          </div>
+        </div>
+
+        <div class="frow">
+          <div class="field"><label>Full name *</label><input name="Full name" required placeholder="Your name"></div>
+          <div class="field"><label>Phone / WhatsApp *</label><input name="Phone" required placeholder="+255 ..."></div>
+        </div>
+        <div class="frow">
+          <div class="field"><label>Email</label><input type="email" name="Email" placeholder="you@example.com"></div>
+          <div class="field"><label>Country</label><input name="Country" placeholder="e.g. Kenya"></div>
+        </div>
+        <div class="frow">
+          <div class="field"><label>Platform</label>
+            <select name="Platform"><option>MT4</option><option>MT5</option><option>Both</option></select>
+          </div>
+          <div class="field"><label>Account size (USD)</label><input name="Account size" placeholder="e.g. 1000"></div>
+        </div>
+        <div class="field"><label>Do you have a VPS?</label>
+          <select name="VPS"><option>Yes</option><option>No — need guidance</option></select>
+        </div>
+        <div class="field"><label>Questions / notes</label>
+          <textarea name="Notes" placeholder="Ask me anything about the EAs..."></textarea>
+        </div>
+
+        <button type="submit" class="btn wa-send"><svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.29.18-1.42-.08-.12-.28-.2-.57-.34zm-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 1 1 8.38 4.63zm8.42-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.47-8.41z"/></svg> Send inquiry to WhatsApp</button>
+        <div class="form-ok" id="eaOk">✔ WhatsApp opened with your inquiry. You can also reach me at +255 745 199 576.</div>
+      </form>
+    </div>
+  </section>
+
+  <div class="socials">
+    <a class="soc" href="https://t.me/tradewithdzung" target="_blank"><svg viewBox="0 0 24 24"><path d="M9.04 15.7l-.38 5.36c.55 0 .79-.24 1.08-.52l2.6-2.48 5.38 3.94c.99.55 1.69.26 1.96-.9L22.9 4.6c.32-1.45-.52-2.02-1.48-1.66L2.2 10.9c-1.42.55-1.4 1.34-.24 1.7l4.93 1.53L18.26 6.8c.6-.4 1.14-.18.7.22z"/></svg> Telegram</a>
+    <a class="soc" href="https://www.instagram.com/tradewithdzung?stkn=azIyY24zc2JjOWRv" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.78 2.7 21.36.27 17 .07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.15A4 4 0 1 1 16 12a4 4 0 0 1-4 3.99zm6.4-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg> Instagram</a>
+    <a class="soc" href="https://www.tiktok.com/@tradewithdzung?_r=1&_t=ZS-99aoD9HJnmC" target="_blank"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.9 2.9 0 1 1-2.01-2.77V9.39a6.34 6.34 0 1 0 5.46 6.28V8.69a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.12z"/></svg> TikTok</a>
+    <a class="soc" href="https://youtube.com/@tradewithdzung?si=ZJ-uL6FaXeh6e82T" target="_blank"><svg viewBox="0 0 24 24"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12z"/></svg> YouTube</a>
+    <a class="soc" href="https://whatsapp.com/channel/0029Vb87YiJAzNc2whz7le1A" target="_blank"><svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.29.18-1.42-.08-.12-.28-.2-.57-.34zm-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 1 1 8.38 4.63zm8.42-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.47-8.41z"/></svg> WhatsApp Channel</a>
+  </div>
+
+  <footer>
+    <img class="flogo" src="assets/logo.png" alt="TradeWithDzung">
+    <p>
+      <a href="https://t.me/tradewithdzung" target="_blank">Telegram</a> ·
+      <a href="https://www.instagram.com/tradewithdzung?stkn=azIyY24zc2JjOWRv" target="_blank">Instagram</a> ·
+      <a href="https://www.tiktok.com/@tradewithdzung?_r=1&_t=ZS-99aoD9HJnmC" target="_blank">TikTok</a> ·
+      <a href="https://youtube.com/@tradewithdzung?si=ZJ-uL6FaXeh6e82T" target="_blank">YouTube</a> ·
+      <a href="https://whatsapp.com/channel/0029Vb87YiJAzNc2whz7le1A" target="_blank">WhatsApp Channel</a> ·
+      <a href="mailto:derickmushi80@gmail.com">Email</a>
+    </p>
+    <p style="margin-top:10px">Personal WhatsApp: <a href="https://wa.me/255745199576" target="_blank">+255 745 199 576</a></p>
+    <p class="risk">Trading forex, gold, indices and crypto carries substantial risk of loss and is not suitable for every investor. Past performance is not indicative of future results. TradeWithDzung provides education, tools and account services — always do your own due diligence.</p>
+    <p style="margin-top:18px">© 2026 TradeWithDzung. All rights reserved.</p>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
